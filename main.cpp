@@ -60,7 +60,7 @@ public:
 
 int main() {
     vector<Student> students;
-    ifstream inputFile("C:\\Games\\c++++\\untitled2\\input.txt");
+    ifstream inputFile("input.txt");
     string line;
     while (getline(inputFile, line)) {
         istringstream iss(line);
@@ -81,7 +81,7 @@ int main() {
     inputFile.close();
 
     // Output the source container to the output file
-    ofstream outputFile("C:\\Games\\c++++\\untitled2\\output.txt");
+    ofstream outputFile("output.txt");
     outputFile << "Source container:" << endl;
     for (const auto& student : students) {
         outputFile << student << endl;
