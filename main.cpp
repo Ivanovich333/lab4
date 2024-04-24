@@ -93,7 +93,7 @@ int main() {
 
     vector<Student> studentsVector(students.begin(), students.end());
 
-    outputFile << endl << "Deque container:" << endl;
+    outputFile << endl << "Copy container:" << endl;
     for (const auto& student : studentsVector) {
         outputFile << student << endl;
     }
