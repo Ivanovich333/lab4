@@ -32,7 +32,7 @@ public:
             this->score[i] = move.score[i];
         }
     }
-    Student& operator=(Student&& moved) noexcept
+    Student& operator=(Student&& moved) 
     {
         if (this != &moved) {
             FIO = move(moved.FIO);
