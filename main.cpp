@@ -3,7 +3,6 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
-#include <deque>
 
 using namespace std;
 
@@ -97,11 +96,11 @@ int main() {
     }
 
     // Copy the sorted container to a deque
-    deque<Student> studentsDeque(students.begin(), students.end());
+    vector<Student> studentsVector(students.begin(), students.end());
 
     // Output the deque container to the output file
     outputFile << endl << "Deque container:" << endl;
-    for (const auto& student : studentsDeque) {
+    for (const auto& student : studentsVector) {
         outputFile << student << endl;
     }
 
