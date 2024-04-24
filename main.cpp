@@ -35,8 +35,8 @@ public:
     Student& operator=(Student&& moved) noexcept
     {
         if (this != &moved) {
-            FIO = std::move(moved.FIO);
-            group = std::move(moved.group);
+            FIO = move(moved.FIO);
+            group = move(moved.group);
             ccnumber = moved.ccnumber;
             for (int i = 0; i < 4; i++) {
                 this->score[i] = moved.score[i];
