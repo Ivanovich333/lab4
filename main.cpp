@@ -49,7 +49,7 @@ public:
         for(int i = 0; i < 3; i++) {
             os << w.score[i] << ", ";
         }
-        os << w.score[3]; // print the last score without a comma
+        os << w.score[3]; 
         return os;
     }
     bool operator<(const Student& other) const {
@@ -69,7 +69,7 @@ int main() {
         getline(iss, fio, ',');
         getline(iss, group, ',');
         iss >> ccnumber;
-        char comma; // add this to consume the comma after ccnumber
+        char comma; 
         iss >> comma;
         for (int i = 0; i < 4; i++) {
             iss >> scores[i];
@@ -78,27 +78,21 @@ int main() {
         students.push_back(student);
     }
     inputFile.close();
-
-    // Output the source container to the output file
     ofstream outputFile("output.txt");
     outputFile << "Source container:" << endl;
     for (const auto& student : students) {
         outputFile << student << endl;
     }
 
-    // Sort the students vector by the FIO variable
     sort(students.begin(), students.end());
 
-    // Output the sorted container to the output file
     outputFile << endl << "Sorted container:" << endl;
     for (const auto& student : students) {
         outputFile << student << endl;
     }
 
-    // Copy the sorted container to a deque
     vector<Student> studentsVector(students.begin(), students.end());
 
-    // Output the deque container to the output file
     outputFile << endl << "Deque container:" << endl;
     for (const auto& student : studentsVector) {
         outputFile << student << endl;
